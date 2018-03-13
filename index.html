@@ -7,11 +7,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./scripts/firebaseConfig.js"></script>
     <script src="./scripts/chat-lib.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <h1>Put your HTML here</h1>
-    
-    <!-- Put your code in the chat.js file -->
+    <form class="username-picker username-input-form">
+        <input type="text" class="username-input" autofocus="autofocus" />
+        <select name="color" class="color-picker-select">
+            <option value="-1">Random color</option>
+        </select>
+        <button type="submit">Start chatting</button>
+    </form>
+    <div class="chat-window">
+        <div class="chat-messages-and-users">
+            <div class="messages-container">
+            </div>
+            <div class="active-users"></div>
+        </div>
+        <div class="message-input-area">
+            <form class="message-input-form">
+                <input type="text" class="message-input" />
+            </form>
+        </div>
+    </div>
     <script src="./scripts/chat.js"></script>
 </body>
 </html>

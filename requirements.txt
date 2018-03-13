@@ -1,0 +1,16 @@
+Build a chat app. 
+
+The requirements are:
+- user must be able to pick a name before starting chat.
+- user messages must be sent to the backend using `ChatApp.newMessage'
+- Messages arriving from the backend must be displayed on the page, including user name and timestamp.
+
+Impelement as many of these features as you can:
+- A user must be able to pick a color for their text to be displayed in.
+- A list of active users should be shown next to the chat messages
+  Where 'active' means we've seen a message from them in the last 5 minutes.
+- The preferred colors for other users must also be used when displaying their messages.
+- Each user must have a mute button next to their name to hide their messages.
+- When a user posts more than 5 messages in 10 seconds, they should be auto-muted for 10 seconds.
+- A user must be able to edit one of their own messages.
+

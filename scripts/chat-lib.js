@@ -1,4 +1,3 @@
-// ASK THE TEACHER FOR CONFIG
 firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
