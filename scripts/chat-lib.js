@@ -38,11 +38,12 @@ ChatApp.getUser = function(name, callback) {
     });
 };
 
-// Creates a new user in the database with the given userName.
+// Creates or update a user in the database with the given userName.
+// If the user object doesn't exist it will be created, otherwise it will be updated.
 // Parameter colorNum should be an index into the ChatApp.colors array or -1 to pick a random color.
 // The callback is invoked with the resulting user data.
 // errHandler is optional.
-ChatApp.newUser = function(userName, colorNum, callback, errHandler) {
+ChatApp.createOrUpdateUser = function(userName, colorNum, callback, errHandler) {
   if (colorNum < 0) {
     colorNum = Math.floor(Math.random() * ChatApp.colors.length);
   }
