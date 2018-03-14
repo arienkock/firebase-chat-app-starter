@@ -10,7 +10,7 @@ $(".username-input-form").on("submit", function(event) {
   event.preventDefault();
   var userName = $(".username-input").val();
   var colorIndex = $(".color-picker-select").val();
-  ChatApp.newUser(userName, colorIndex, function(user) {
+  ChatApp.createOrUpdateUser(userName, colorIndex, function(user) {
     // Remember current user's favorite color
     handleUserUpdate(user);
     currentUser = user;
