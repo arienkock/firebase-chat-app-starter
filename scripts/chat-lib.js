@@ -43,7 +43,12 @@ ChatApp.getUser = function(name, callback) {
 // Parameter colorNum should be an index into the ChatApp.colors array or -1 to pick a random color.
 // The callback is invoked with the resulting user data.
 // errHandler is optional.
-ChatApp.createOrUpdateUser = function(userName, colorNum, callback, errHandler) {
+ChatApp.createOrUpdateUser = function(
+  userName,
+  colorNum,
+  callback,
+  errHandler
+) {
   if (colorNum < 0) {
     colorNum = Math.floor(Math.random() * ChatApp.colors.length);
   }
@@ -55,11 +60,11 @@ ChatApp.createOrUpdateUser = function(userName, colorNum, callback, errHandler) 
     .then(function() {
       callback(data);
     })
-    .catch(errHandler ? errHandler : function(){});
+    .catch(errHandler ? errHandler : function() {});
 };
 
 // Creates a new message with given text and user name.
-// This function doesn't take a callback, because the new message will be 
+// This function doesn't take a callback, because the new message will be
 // received by anyone listening through ChatApp.addMessageListener.
 ChatApp.newMessage = function(userName, text) {
   db.collection("messages").add({
