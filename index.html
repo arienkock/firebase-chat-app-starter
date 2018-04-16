@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Chat App</title>
@@ -7,11 +8,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./scripts/firebaseConfig.js"></script>
     <script src="./scripts/chat-lib.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Put your HTML here</h1>
-    
+    <div class="user-login">
+        <label>Name:
+            <input id="name-input" type="text" placeholder="e.g. Steve" autofocus="autofocus">
+        </label>
+        <button id="start-button">Start chat</button>
+    </div>
+    <div class="chat-window">
+        <h1>This will be the chat window</h1>
+    </div>
     <!-- Put your code in the chat.js file -->
     <script src="./scripts/chat.js"></script>
 </body>
+
 </html>
